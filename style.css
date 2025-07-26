@@ -13,7 +13,6 @@ header {
   background: linear-gradient(120deg, #a8edea, #fed6e3);
   padding: 1rem 0;
   box-shadow: 0 3px 6px rgba(0,0,0,0.1);
-  border: 3px solid red;
 }
 
 nav ul {
@@ -41,6 +40,10 @@ section {
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.05);
 }
+
+.about-container { display: flex; }
+.about-image { flex: 1; }
+.about-content { flex: 1; padding: 2rem; }
 
 h1, h2, h3 { color: #4a7c59; }
 
