@@ -1,19 +1,13 @@
-function openTab(tabName) {
-  const tabContents = document.querySelectorAll('.tab-content');
-  const tabButtons = document.querySelectorAll('.tab-button');
-  tabContents.forEach(tab => tab.classList.remove('active'));
-  tabButtons.forEach(btn => btn.classList.remove('active'));
-  document.getElementById(tabName).classList.add('active');
-  event.currentTarget.classList.add('active');
+function openTab(tabId) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.getElementById(tabId).classList.add('active');
+  document.querySelectorAll('.tab-button').forEach(b => b.classList.remove('active'));
+  event.target.classList.add('active');
 }
-
 function openModal(img) {
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImage");
-  modal.style.display = "block";
-  modalImg.src = img.src;
+  document.getElementById('imageModal').style.display = 'block';
+  document.getElementById('modalImage').src = img.src;
 }
-
 function closeModal() {
-  document.getElementById("imageModal").style.display = "none";
+  document.getElementById('imageModal').style.display = 'none';
 }

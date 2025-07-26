@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Saahithi's Portfolio</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header><nav><ul>
+<li><a href="index.html">About Me</a></li>
+<li><a href="portfolio.html" class="active">My Portfolio</a></li>
+<li><a href="https://instagram.com/saahithi_the_great" target="_blank">Instagram</a></li>
+<li><a href="https://medium.com/@d.srisaahithi" target="_blank">Medium</a></li>
+</ul></nav></header>
+<section id="portfolio" class="portfolio-section">
+<h2>My Portfolio</h2>
+<div class="tabs">
+<button class="tab-button active" onclick="openTab('free-time')">My Free Time</button>
+<button class="tab-button" onclick="openTab('thoughts')">My Thoughts</button>
+<button class="tab-button" onclick="openTab('learnings')">My Learnings</button>
+</div>
+<div class="tab-content active" id="free-time">
+<h3>My Free Time</h3>
+<p>I love photography, painting, and exploring creative hobbies!</p>
+<div class="gallery">
+<img src="assets/photo1.jpg" alt="Photography 1" onclick="openModal(this)">
+<img src="assets/photo2.jpg" alt="Photography 2" onclick="openModal(this)">
+<img src="assets/photo3.jpg" alt="Photography 3" onclick="openModal(this)">
+</div></div>
+<div class="tab-content" id="thoughts">
+<h3>My Thoughts</h3>
+<p>I reflect on books I read, stories that inspire me, and ideas that spark curiosity.</p>
+</div>
+<div class="tab-content" id="learnings">
+<h3>My Learnings</h3>
+<p>This is where I document the things I learn — from tech and AI to life lessons and beyond.</p>
+</div></section>
+<div id="imageModal" class="modal">
+<span class="close" onclick="closeModal()">&times;</span>
+<img class="modal-content" id="modalImage">
+</div>
+<footer><p>Connect with me on <a href="https://instagram.com/your_instagram">Instagram</a> and <a href="https://medium.com/@your_medium">Medium</a></p></footer>
+<script src="script.js"></script>
+</body></html>
