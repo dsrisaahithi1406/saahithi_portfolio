@@ -1,54 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Saahithi's Portfolio</title>
-<link rel="stylesheet" href="style.css">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio - Saahithi</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header><nav><ul>
-<li><a href="index.html">About Me</a></li>
-<li><a href="portfolio.html" class="active">My Portfolio</a></li>
-<li><a href="https://instagram.com/saahithi_the_great" target="_blank">Instagram</a></li>
-<li><a href="https://medium.com/@d.srisaahithi" target="_blank">Medium</a></li>
-</ul></nav></header>
-<section id="portfolio" class="portfolio-section">
-<h2>My Portfolio</h2>
-<div class="tabs">
-<button class="tab-button active" onclick="openTab('free-time')">My Free Time</button>
-<button class="tab-button" onclick="openTab('thoughts')">My Thoughts</button>
-<button class="tab-button" onclick="openTab('learnings')">My Learnings</button>
-</div>
-<div class="tab-content active" id="free-time">
-<h3>My Free Time</h3>
-<p>I love photography, painting, and exploring creative hobbies!</p>
-<div class="gallery">
-<img src="assets/MyBandWPic.jpg" alt="Photography 1" onclick="openModal(this)" />
-<!-- <img src="assets/IMG_0432.jpg" alt="Photography 2" onclick="openModal(this)" />
-<img src="assets/IMG_5657.jpg" alt="Photography 3" onclick="openModal(this)" />
-<img src="assets/IMG_5819.jpg" alt="Photography 3" onclick="openModal(this)" />
-<img src="assets/IMG_5821.jpg" alt="Photography 3" onclick="openModal(this)" />
-<img src="assets/IMG_6354.jpg" alt="Photography 3" onclick="openModal(this)" />
-<img src="assets/IMG_6383.jpg" alt="Photography 3" onclick="openModal(this)" />
-<img src="assets/IMG_6839.jpg" alt="Photography 3" onclick="openModal(this)" />
-<img src="assets/IMG_6858.jpg" alt="Photography 3" onclick="openModal(this)" />
-<img src="assets/IMG_6864.jpg" alt="Photography 3" onclick="openModal(this)" />
-<img src="assets/IMG_7110.jpg" alt="Photography 3" onclick="openModal(this)" />
-<img src="assets/IMG_7127.jpg" alt="Photography 3" onclick="openModal(this)" /> -->
-</div></div>
-<div class="tab-content" id="thoughts">
-<h3>My Thoughts</h3>
-<p>I reflect on books I read, stories that inspire me, and ideas that spark curiosity.</p>
-</div>
-<div class="tab-content" id="learnings">
-<h3>My Learnings</h3>
-<p>This is where I document the things I learn — from tech and AI to life lessons and beyond.</p>
-</div></section>
-<div id="imageModal" class="modal">
-<span class="close" onclick="closeModal()">&times;</span>
-<img class="modal-content" id="modalImage">
-</div>
-<footer><p>Connect with me on <a href="https://instagram.com/saahithi_the_great">Instagram</a> and <a href="https://medium.com/@your_medium">Medium</a></p></footer>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">About Me</a></li>
+        <li><a href="portfolio.html" class="active">My Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="tabs">
+    <button class="tab-button active" data-tab="free-time">My Free Time</button>
+    <button class="tab-button" data-tab="thoughts">My Thoughts</button>
+    <button class="tab-button" data-tab="learnings">My Learnings</button>
+  </section>
+
+  <section id="free-time" class="tab-content active">
+    <h2>My Free Time</h2>
+    <div class="gallery">
+      <img src="assets/MyBandWPic.jpg" alt="Photography 1">
+      <img src="assets/IMG_0007.jpg" alt="Photography 2">
+    </div>
+  </section>
+
+  <section id="thoughts" class="tab-content">
+    <h2>My Thoughts</h2>
+    <p>Here I share my ideas, book notes, and stories.</p>
+  </section>
+
+  <section id="learnings" class="tab-content">
+    <h2>My Learnings</h2>
+    <p>Technical, AI-based, and life lessons I’ve learned.</p>
+  </section>
+
+  <section id="resume" class="portfolio-section">
+    <h2>My Resume</h2>
+    <a href="assets/resume.pdf" target="_blank" class="btn">📄 View Resume</a>
+  </section>
+
+  <section id="projects" class="portfolio-section">
+    <h2>My Projects</h2>
+    <div class="carousel-container">
+      <div class="carousel-track">
+        <div class="carousel-item">
+          <img src="assets/project1.jpg" alt="Project 1">
+          <div class="project-caption"><h3>AI Chatbot</h3><p>Developed an AI-powered chatbot integrated into a customer support system.</p></div>
+        </div>
+        <div class="carousel-item">
+          <img src="assets/project2.jpg" alt="Project 2">
+          <div class="project-caption"><h3>Portfolio Website</h3><p>Designed and deployed a personal portfolio using GitHub Pages.</p></div>
+        </div>
+      </div>
+      <button class="carousel-btn prev">❮</button>
+      <button class="carousel-btn next">❯</button>
+    </div>
+  </section>
+
+  <footer><p>© 2025 Saahithi. All Rights Reserved.</p></footer>
 <script src="script.js"></script>
-</body></html>
+</body>
+</html>
