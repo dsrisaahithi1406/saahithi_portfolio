@@ -1,4 +1,6 @@
-/* Global Styles */
+/* ---------------------------
+   General Styling
+---------------------------- */
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
@@ -8,12 +10,12 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
 header {
   background: #b3e5fc;
   padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
+
 nav ul {
   display: flex;
   justify-content: center;
@@ -21,59 +23,78 @@ nav ul {
   margin: 0;
   padding: 0;
 }
+
 nav ul li {
   margin: 0 1rem;
 }
+
 nav ul li a {
   color: #004d40;
   text-decoration: none;
   font-weight: 600;
   font-size: 1.1rem;
 }
+
 nav ul li a.active,
 nav ul li a:hover {
   color: #d81b60;
 }
 
-/* Section Layout */
 section {
   margin: 2rem auto;
   padding: 2rem;
   max-width: 1000px;
   background: #ffffffd9;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* About Me Vertical Split */
-.about-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  align-items: center;
-}
-.about-image {
-  flex: 1;
-  min-width: 300px;
-}
-.about-image img {
-  width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.about-content {
-  flex: 2;
-  min-width: 300px;
-}
-
-/* Headings */
 h1, h2, h3 {
   color: #00796b;
 }
 
-/* Tabs */
-.tabs { display: flex; gap: 1rem; margin-bottom: 1rem; }
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #b3e5fc;
+  color: #004d40;
+  margin-top: 2rem;
+  border-top: 2px solid #d1c4e9;
+}
+
+/* ---------------------------
+   About Me Layout
+---------------------------- */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.about-content {
+  flex: 1;
+}
+
+/* ---------------------------
+   Tabs Section
+---------------------------- */
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
 .tab-button {
   background: #fff;
   border: 2px solid #b3e5fc;
@@ -83,31 +104,55 @@ h1, h2, h3 {
   font-weight: 500;
   transition: background 0.3s;
 }
-.tab-button.active, .tab-button:hover { background: #d1c4e9; }
 
-.tab-content { display: none; }
-.tab-content.active { display: block; }
+.tab-button.active,
+.tab-button:hover {
+  background: #d1c4e9;
+}
 
-/* Gallery */
-.gallery { display: flex; flex-wrap: wrap; gap: 10px; }
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ---------------------------
+   Gallery
+---------------------------- */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 .gallery img {
   width: 160px;
   border-radius: 8px;
   cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
-.gallery img:hover { transform: scale(1.05); }
 
-/* Modal */
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* ---------------------------
+   Modal Viewer
+---------------------------- */
 .modal {
   display: none;
   position: fixed;
   z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
 }
+
 .modal-content {
   display: block;
   margin: 5% auto;
@@ -115,48 +160,19 @@ h1, h2, h3 {
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0,0,0,0.3);
 }
+
 .close {
   position: absolute;
-  top: 30px; right: 50px;
+  top: 30px;
+  right: 50px;
   color: white;
   font-size: 2rem;
   cursor: pointer;
 }
 
-/* Resume & Carousel */
-.portfolio-section {
-  margin: 3rem auto;
-  padding: 2rem;
-  max-width: 1000px;
-  background: #fffefc;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.6rem 1.2rem;
-  background: #ffdde1;
-  color: #2e3b4e;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background 0.3s;
-}
-.btn:hover { background: #ffb6c1; }
-
-/* Carousel */
-.carousel-container { position: relative; overflow: hidden; }
-.carousel-track { display: flex; transition: transform 0.5s ease-in-out; }
-.carousel-item { min-width: 100%; text-align: center; padding: 1rem; }
-.carousel-item img { width: 100%; max-height: 400px; object-fit: cover; border-radius: 10px; }
-.project-caption { margin-top: 0.5rem; background: rgba(255,255,255,0.8); padding: 10px; border-radius: 8px; }
-.carousel-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.5); color: white; border: none; font-size: 2rem; cursor: pointer; padding: 0.5rem 1rem; border-radius: 50%; }
-.carousel-btn.prev { left: 10px; }
-.carousel-btn.next { right: 10px; }
-.carousel-btn:hover { background: rgba(0,0,0,0.7); }
-
-/* Collage Grid */
+/* ---------------------------
+   Collage Layout (My Projects)
+---------------------------- */
 .collage {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -178,17 +194,64 @@ h1, h2, h3 {
   transform: scale(1.05);
 }
 
-/* Special layout for making it "collage-like" */
+/* Special layout to make it collage-like */
 .collage img:nth-child(1) { grid-column: span 2; height: 200px; }
 .collage img:nth-child(3) { grid-row: span 2; height: 310px; }
 
+/* ---------------------------
+   Carousel
+---------------------------- */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+}
 
-/* Footer */
-footer {
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
   text-align: center;
-  padding: 1rem;
+}
+
+.carousel-item img {
+  width: 80%;
+  border-radius: 10px;
+}
+
+.project-caption {
+  background: #ffffffc9;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background: #b3e5fc;
-  color: #004d40;
-  margin-top: 2rem;
-  border-top: 2px solid #d1c4e9;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.2rem;
+}
+
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+/* ---------------------------
+   Responsive Design
+---------------------------- */
+@media (max-width: 768px) {
+  .about-container { flex-direction: column; }
+  .collage { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .collage { grid-template-columns: 1fr; }
+  .collage img { height: 200px; }
 }
