@@ -8,30 +8,49 @@ document.querySelectorAll('.tab-button').forEach(btn => {
   });
 });
 
-// Gallery Modal
+// // Gallery Modal
+// const modal = document.createElement('div');
+// modal.classList.add('modal');
+// modal.innerHTML = '<span class="close">&times;</span><img class="modal-content">';
+// document.body.appendChild(modal);
+
+// const modalImg = modal.querySelector('.modal-content');
+// document.querySelectorAll('.gallery img').forEach(img => {
+//   img.addEventListener('click', () => {
+//     modal.style.display = 'block';
+//     modalImg.src = img.src;
+//   });
+// });
+// modal.querySelector('.close').onclick = () => (modal.style.display = 'none');
+
+// // Carousel
+// const track = document.querySelector('.carousel-track');
+// const items = document.querySelectorAll('.carousel-item');
+// let index = 0;
+// document.querySelector('.carousel-btn.next').onclick = () => {
+//   index = (index + 1) % items.length;
+//   track.style.transform = `translateX(-${index * 100}%)`;
+// };
+// document.querySelector('.carousel-btn.prev').onclick = () => {
+//   index = (index - 1 + items.length) % items.length;
+//   track.style.transform = `translateX(-${index * 100}%)`;
+// };
+
+
+// Gallery + Collage Modal
 const modal = document.createElement('div');
 modal.classList.add('modal');
 modal.innerHTML = '<span class="close">&times;</span><img class="modal-content">';
 document.body.appendChild(modal);
 
 const modalImg = modal.querySelector('.modal-content');
-document.querySelectorAll('.gallery img').forEach(img => {
+
+// Select both gallery and collage images
+document.querySelectorAll('.gallery img, .collage img').forEach(img => {
   img.addEventListener('click', () => {
     modal.style.display = 'block';
     modalImg.src = img.src;
   });
 });
-modal.querySelector('.close').onclick = () => (modal.style.display = 'none');
 
-// Carousel
-const track = document.querySelector('.carousel-track');
-const items = document.querySelectorAll('.carousel-item');
-let index = 0;
-document.querySelector('.carousel-btn.next').onclick = () => {
-  index = (index + 1) % items.length;
-  track.style.transform = `translateX(-${index * 100}%)`;
-};
-document.querySelector('.carousel-btn.prev').onclick = () => {
-  index = (index - 1 + items.length) % items.length;
-  track.style.transform = `translateX(-${index * 100}%)`;
-};
+modal.querySelector('.close').onclick = () => modal.style.display = 'none';
